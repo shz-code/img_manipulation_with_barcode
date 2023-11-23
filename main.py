@@ -8,7 +8,7 @@ def generate_barcode(barcode_data):
     # Save the barcode as PNG
     my_code.save("barcode")
 
-# Function to generate a QR code and add it to an image
+# Function to generate a barcode code and add it to an image
 def add_barcode_to_img(image_path, output_image_path):
     # Open the image using Pillow
     image = Image.open(image_path)
@@ -19,11 +19,11 @@ def add_barcode_to_img(image_path, output_image_path):
 
     barcode = Image.open("barcode.png")
 
-    # Paste the QR code onto the image
+    # Paste the barcode code onto the image
     image.paste(barcode, (x, y))
 
     image.save(output_image_path)
-    # Close the image and QR code
+    # Close the image and barcode code
     image.close()
 
 def add_text_to_img(image_path,text,output_image_path):
